@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ECMA5 Array mothed</title>
+</head>
+<body>
+	<script>
+		Array.prototype.IndexOf = function(obj) {
+			var n = null;
+			if (Array.isArray(this)) {
+				for (var i = 0; i < this.length; i++) {
+					if (this[i] === obj) {
+						return i;
+					}else {
+						n++;
+					}
+					if (n == this.length) {
+						return -1;
+					};
+				};
+			}else {
+				console.log("undefined is not a function")
+			};
+		};
+
+
+		Array.prototype.LastIndexOf = function(obj) {
+			var n = null;
+			if (Array.isArray(this)) {
+				for (var i = this.length; i > 0 ; i--) {
+					if (this[i] === obj) {
+						return i;
+					}else {
+						n++;
+					}
+					if (n == this.length) {
+						return -1;
+					};
+				};
+			}else {
+				console.log("undefined is not a function")
+			};
+		};
+
+
+
+		Array.prototype.ForEach = function(fun,context) {
+			if (Array.isArray(this)) {
+				if (typeof fun == "function") {
+					for (var i = 0; i < this.length; i++) {
+						fun.call(context,this[i],i,this);
+					}
+				}else {
+					throw new TypeError(fun.toString() + "is not a function");
+				}
+			}else {
+				console.log("undefined is not a function")
+			};
+		};
+
+
+
+		Array.prototype.Map = function(fun,context) {
+			var arr = [];
+			if (Array.isArray(this)) {
+				if (typeof fun == "function") {
+					for (var i = 0; i < this.length; i++) {
+						arr.push(fun.call(context,this[i],i,this));
+					}; 
+				}else {
+					throw new TypeError(fun.toString() + "is not a function");
+				}
+			}else {
+				console.log("undefined is not a function")
+			};
+		};
+
+
+
+
+		Array.prototype.Filter = function(fun,context) {
+			var arr = [];
+			if (Array.isArray(this)) {
+				if (typeof fun == "function") {
+					for (var i = 0; i < this.length; i++) {
+						if (fun.call(context,this[i],i,this)) {
+							arr.push(this[i]);
+						}
+					}; 
+				}else {
+					throw new TypeError(fun.toString() + "is not a function");
+				}
+			}else {
+				console.log("undefined is not a function")
+			};
+		};
+
+
+
+
+		Array.prototype.Some = function(fun,context) {
+			var flag = false;
+			if (Array.isArray(this)) {
+				if (typeof fun == "function") {
+					for (var i = 0; i < this.length; i++) {
+						if (flag === false) {
+							flag = !!fun.call(context,this[i],i,this);
+						} else {
+							break;
+						}
+					}; 
+				}else {
+					throw new TypeError(fun.toString() + "is not a function");
+				}
+				return flag;
+			}else {
+				console.log("undefined is not a function")
+			};
+		};
+
+
+		Array.prototype.Some = function(fun,context) {
+			var flag = true;
+			if (Array.isArray(this)) {
+				if (typeof fun == "function") {
+					for (var i = 0; i < this.length; i++) {
+						if (flag === true) {
+							flag = !!fun.call(context,this[i],i,this);
+						} else {
+							break;
+						}
+					}; 
+				}else {
+					throw new TypeError(fun.toString() + "is not a function");
+				}
+				return flag;
+			}else {
+				console.log("undefined is not a function")
+			};
+		};
+
+
+
+		Array.prototype.Reduce = function(fun,initialValue) {
+			var previous = initialValue, i = 0, length = this.length;
+			if (Array.isArray(this)) {
+				if (typeof fun == "function") {
+					if (initialValue == undefined) {
+						previous = this[0];
+						i = 1;
+					} else {
+						for ( i; i < Things.length; i++) {
+							previous = fun(previous, this[i], i, this);
+						}
+					}
+				}else {
+					throw new TypeError(fun.toString() + "is not a function");
+				}
+				return previous;
+			}else {
+				console.log("undefined is not a function")
+			};
+		};
+
+
+		Array.prototype.Reduce = function(fun,initialValue) {
+			var previous = initialValue, i = length - 1, length = this.length;
+			if (Array.isArray(this)) {
+				if (typeof fun == "function") {
+					if (initialValue == undefined) {
+						previous = this[i];
+						i--;
+					} else {
+						for (i; i > -1; i--) {
+							previous = fun(previous, this[i], i, this);
+						}
+					}
+				}else {
+					throw new TypeError(fun.toString() + "is not a function");
+				}
+				return previous;
+			}else {
+				console.log("undefined is not a function")
+			};
+		};
+	</script>
+</bod>
+</html>
