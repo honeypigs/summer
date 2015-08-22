@@ -6,10 +6,10 @@
 </head>
 <body>
 	<script>
-		Array.prototype.IndexOf = function(obj) {
+		Array.prototype.IndexOf = function(obj,v1,v2)
 			var n = null;
 			if (Array.isArray(this)) {
-				for (var i = 0; i < this.length; i++) {
+				for (var i = v1||0; i < v2||this.length; i++) {
 					if (this[i] === obj) {
 						return i;
 					}else {
@@ -25,10 +25,10 @@
 		};
 
 
-		Array.prototype.LastIndexOf = function(obj) {
+		Array.prototype.LastIndexOf = function(obj,v1,v2) {
 			var n = null;
 			if (Array.isArray(this)) {
-				for (var i = this.length; i > 0 ; i--) {
+				for (var i = v1||this.length; i > v2||0 ; i--) {
 					if (this[i] === obj) {
 						return i;
 					}else {
