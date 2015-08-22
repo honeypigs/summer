@@ -2,11 +2,10 @@ body{cursor:pointer;font-size:30px;font-family:"Microsoft YaHei",Arial,Helvetica
 .change{transition:color 1s,background-color 1s;-moz-transition:color 1s,background-color 1s;-webkit-transition:color 1s,background-color 1s;-o-transition:color 1s,background-color 1s;}
 .change:hover{color:#535456;background-color:#1D2021;}
 .container{position:absolute;margin:auto;left:0;right:0;top:0;bottom:0;height:545px;width:443px;border-radius:20px;background-color:#2F3235;color:#AFB0B1;}
-.output{cursor:text;position:absolute;left:0;top:0;height:90px;width:443px;text-align:right;}.output #output1{padding-right:20px;height:30;font-size:16px;line-height:40px;}
-.output #output2{padding-right:20px;height:60;line-height:60px;}
+.output{cursor:text;position:absolute;left:0;top:0;height:90px;width:443px;text-align:right;}.output #output1{padding-right:20px;height:30px;font-size:16px;line-height:40px;}
+.output #output2{padding-right:20px;height:60px;line-height:60px;}
 .font{position:absolute;height:90px;width:110px;text-align:center;border:1px #373A3C solid;border-left:0;border-bottom:0;line-height:90px;color:#5B6069;}
-.top_font{position:absolute;left:0;top:91px;height:90px;width:443px;}.top_font #clean{left:0;top:0;}
-.top_font #delete{left:111px;top:0;}
+.top_font{position:absolute;left:0;top:91px;height:90px;width:443px;}.top_font #clean{left:0;width:221px;top:0;}
 .top_font #divide{left:222px;top:0;}
 .top_font #multiply{left:333px;top:0;border-right:0;}
 .right_font{position:absolute;right:0;top:182px;height:363px;width:110px;}.right_font #reduce{right:0;top:0;border-right:0;}
@@ -23,5 +22,4 @@ body{cursor:pointer;font-size:30px;font-family:"Microsoft YaHei",Arial,Helvetica
 #num7{left:0;top:182px;}
 #num8{left:111px;top:182px;}
 #num9{left:222px;top:182px;}
-#num0{width:221px;left:0;bottom:0;border-bottom-left-radius:20px;}
-#dot{right:0;bottom:0;}
+#num0{width:332px;left:0;bottom:0;border-bottom-left-radius:20px;}
