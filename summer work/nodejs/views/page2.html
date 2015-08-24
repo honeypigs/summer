@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#experiment{
+			-moz-perspective: 800px;
+			-moz-perspective-origin:50% 50%;
+			-moz-transform-style:-moz-perspective-3d;
+		}
+		#duang{
+			background-color: blue;
+			width: 300px;
+			height: 300px;
+			position: absolute;
+			left: 0;top: 0;right: 0;bottom: 0;
+			margin: auto;
+			-webkit-transform:rotateX(45deg);
+			-ms-transform:rotateX(45deg);
+			transform:rotateX(45deg);
+			-moz-transform:rotateX(45deg);
+			-moz-transition:background-color 2s,-moz-transform 2s;
+			-webkit-transition:background-color 2s, -webkit-transform 2s;
+			-ms-transition:background-color 2s, -ms-transform 2s;
+			transition:background-color 2s,transform 2s;
+		}
+		#duang:hover{
+			background-color: red;
+			-webkit-transform:rotateX(360deg);
+			-ms-transform:rotateX(360deg);
+			transform:rotateX(360deg);
+			-moz-transform:rotateX(360deg);
+		}
+	</style>
+</head>
+<body>
+	<div id="experiment">
+		<div id="duang">
+			<h1>duang~~~这是千万级特技</h1>
+		</div>
+	</div>
+	<script type="text/javascript">
+	
+	</script>
+</body>
+</html>
