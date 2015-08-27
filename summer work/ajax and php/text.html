@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	body {
+		font-family: arial sans-serif;
+		font-size: 16px;
+	}
+	label {
+		display: inline-block;
+		width: 200px;
+		text-align: right;
+	}
+	</style>
+</head>
+<body>
+<h1>staff search</h1>
+<label>Please input staff number</label>
+<input type="text" id = "keyword">
+<br>
+<button id = "search">search</button>
+<p id="searchResult"></p>
+<h1>staff create</h1>
+<label>please input name</label>
+<input type="text" id="staffName">
+<br>
+<label>please input number</label>
+<input type="text" id="staffNumber">
+<br>
+<label>please input sex</label>
+<select id="staffsex">
+	<option>Woman</option>
+	<option>Man</option>
+</select>
+<br>
+<label>please input job</label>
+<input type="text" id="staffJob">
+<br>
+<button id = "save">save</button>
+<p id="createResult"></p>
+
+<script>
+	document.getElementById('search').onclick = function() {
+		var xhr = new XMLHttpRequest();
+		xhr.open("GET","text.php?number=" + document.getElementById("keyword").value);
+		xhr.onreadystatechange = function(){
+			if (xhr.readyState === 4 && xhr.status === 200) {
+				document.getElementById("searchResult").innerHTML = xhr.responseText; 
+			}
+			else{
+				alert("error");
+			}
+		xhr.send();
+	}
+
+	document.getElementById('save').onclick = function() {
+		var xhr = new XMLHttpRequest();
+		xhr.open("POST","text.php");
+		var data = "name=" + document.getElementById("staffName").value
+		 + "&number=" + document.getElementById("staffNumber").value
+		 + "&sex=" + document.getElementById("staffsex").value
+		 + "&job=" + document.getElementById("staffJob").value
+		 xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		xhr.onreadystatechange = function(){
+			if (xhr.readyState === 4 && xhr.status === 200) {
+				document.getElementById("createResult").innerHTML = xhr.responseText; 
+			}
+			else{
+				alert("error");
+			}
+		xhr.send(data);
+	}
+</script>
+</body>
+</html>
