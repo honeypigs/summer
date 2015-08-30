@@ -1,0 +1,8 @@
+html{font-size:75%;font-family:"Microsoft YaHei",Arial,Helvetica,sans-serif;}
+@media only screen and (min-width:481px){html{font-size:112.8%;}}@media only screen and (min-width:561px){html{font-size:130.79999999999998%;}}@media only screen and (min-width:641px){html{font-size:150%;}}.section{position:relative;width:95.3125%;height:7.166667rem;margin-left:4.6875%;border-bottom:1px #CCC solid;}
+.img{float:left;margin-top:0.875rem;width:6.6667rem;height:5.4166667rem;}.img img{height:100%;width:100%;vertical-align:top;}
+.content{margin-left:7.5rem;height:5.4166667rem;}.content .storeName{margin:0;height:1.25rem;padding-top:1.2917rem;color:#000;font-size:1.25rem;line:1.2917rem;}.content .storeName i{vertical-align:-1px;display:inline-block;width:1.166667rem;height:1.1666667rem;}.content .storeName i img{width:100%;}
+.content .star{margin:0;margin-top:0.7083333rem;height:1rem;color:#000;font-size:1rem;}.content .star i{vertical-align:-1px;display:inline-block;height:0.92rem;width:5.5rem;margin-right:0.54166666rem;}.content .star i img{width:100%;}
+.content .data{margin:0;margin-top:0.7083333rem;height:1rem;color:#CCC;font-size:1rem;}.content .data label{margin-right:0.54166666rem;}
+.content .data i{vertical-align:-1px;display:inline-block;height:1.0417rem;width:1rem;margin-right:0.5rem;}.content .data i img{width:100%;}
+.cutdown{position:absolute;top:2.7rem;right:0.4166667rem;height:3.5rem;font-size:1.083333rem;color:#F85800;text-align:center;font-face:FZLTXK-Light;}.cutdown .num{font-size:3.33333333rem;}
